@@ -13,3 +13,9 @@
 3. Run `rosrun rviz rviz`
 4. Open your browser to `localhost:8080/vnc.html` and click connect.
 5. RViz is now running in your browser.
+
+## Editing your workspace
+The workspace folder that gets created on your machine by `docker-compose` is where you can write and edit your packages. It maps to `~/catkin_ws` on the Docker container. However, if you want to run `catkin_make`, do so by creating a bash via `docker-compose exec ros bash` and running `catkin_make` in `/catkin_ws`.
+
+## Installing other packages
+Edit the `Dockerfile` line that installs packages and rebuild the container using `docker-compose build`.
